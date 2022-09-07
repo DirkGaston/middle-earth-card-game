@@ -5,14 +5,14 @@ import AdventureLeaderboard from "./pages/AdventureLeaderboard";
 import NavBar from "./components/NavBar";
 import AddAdventurer from "./pages/AddAdventurer";
 import SearchAdventurer from "./pages/SearchAdventurer";
-import { Players } from "./data/Players";
+import { Players as Adventurers } from "./data/Players";
 
 function App() {
-  const [Adventurers, setAdventurers] = useState([]);
+  const [Players, setAdventurers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    setAdventurers(Players);
+    setAdventurers(Adventurers);
   }, []);
 
   function addPlayer(
@@ -20,8 +20,7 @@ function App() {
     playerRace,
     playerMail,
     playerBio,
-    playerQuote,
-    playerCharacter
+    playerQuote
   ) {
     setAdventurers([
       ...Players,
@@ -32,7 +31,6 @@ function App() {
         email: playerMail.trim(),
         bio: playerBio.trim(),
         quote: playerQuote.trim(),
-        character: playerCharacter.trim(),
       },
     ]);
     setSearchTerm("");

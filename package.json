@@ -1,5 +1,6 @@
 {
   "name": "middle-earth-card-game",
+  "homepage": "https://dirkgaston.github.io/middle-earth-card-game/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

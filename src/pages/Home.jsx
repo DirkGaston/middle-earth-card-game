@@ -3,7 +3,11 @@ const Home = () => {
     <div className="flamingCircleContainer">
       <div className="flamingCircle">
         <a href="">
-          <img className="sauronLoop" src="/src/assets/img/sauron.gif" alt="" />
+          <img
+            className="sauronLoop"
+            src="https://i.giphy.com/media/fbBDhlw5pPAYg/giphy.webp"
+            alt="sauronLoop"
+          />
         </a>
       </div>
 

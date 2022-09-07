@@ -7,7 +7,7 @@ const SearchAdventurer = ({ Players, searchTerm, setSearchTerm }) => {
     <div className="searchContainer">
       <div className="searchBarContainer">
         <form>
-          <label for="searchText">Search Adventurer</label>
+          <label htmlFor="searchText">Search Adventurer</label>
           <input
             className="searchBar"
             id="searchText"
@@ -33,7 +33,7 @@ const SearchAdventurer = ({ Players, searchTerm, setSearchTerm }) => {
                   <i className="ms ms-g" id="mana-icon"></i>
                 </div>
 
-                <img className="frameArt" src={player.src} alt={player.alt} />
+                {/* <img className="frameArt" src={player.src} alt={player.alt} /> */}
 
                 <div className="frameTypeLine">
                   <h1 className="race">{player.race}</h1>

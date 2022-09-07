@@ -12,9 +12,9 @@ const Navigation = (props) => {
       <Link to="/leaderboard">
         <button className="navLink">Ranking</button>
       </Link>
-      {/* <Link to="/add">
+      <Link to="/add">
         <button className="navLink">New Adventurer</button>
-      </Link> */}
+      </Link>
       <Link to="/search">
         <button className="navLink">Search Adventurer</button>
       </Link>

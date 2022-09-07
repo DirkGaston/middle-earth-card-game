@@ -7,43 +7,30 @@ const AdventureLeaderboard = ({ Players }) => {
       </div>
       <div className="cardsContainer">
         {Players.slice(0, size).map((player) => (
-          <div class="cardContainer" key={player.id}>
-            <div class="cardBackground">
-              <div class="cardFrame">
-                <div class="frameHeader">
-                  <h1 class="name">{player.name}</h1>
-                  <i class="ms ms-g" id="mana-icon"></i>
+          <div className="cardContainer" key={player.id}>
+            <div className="cardBackground">
+              <div className="cardFrame">
+                <div className="frameHeader">
+                  <h1 className="name">{player.name}</h1>
+                  <i className="ms ms-g" id="mana-icon"></i>
                 </div>
 
-                <img class="frameArt" src={player.src} alt={player.alt} />
+                <img className="frameArt" src={player.src} alt={player.alt} />
 
-                <div class="frameTypeLine">
-                  <h1 class="race">{player.race}</h1>
-                  <h2 class="email">{player.email}</h2>
+                <div className="frameTypeLine">
+                  <h1 className="race">{player.race}</h1>
+                  <h2 className="email">{player.email}</h2>
                 </div>
 
-                <div class="frameTextBox">
-                  <p class="description ftb-inner-margin">{player.bio}</p>
-                  <p class="flavourText">{player.quote}</p>
+                <div className="frameTextBox">
+                  <p className="description ftb-inner-margin">{player.bio}</p>
+                  <p className="flavourText">{player.quote}</p>
                 </div>
 
-                <div class="frameBottomInfo inner-margin">
-                  <div class="fbi-left">
-                    <p>140/184 R</p>
-                    <p>
-                      OGW &#x2022; EN{" "}
-                      <img
-                        class="paintbrush"
-                        src="https://image.ibb.co/e2VxAS/paintbrush_white.png"
-                        alt="paintbrush icon"
-                      />
-                      Wesley Burt
-                    </p>
-                  </div>
+                <div className="frameBottomInfo inner-margin">
+                  <div className="fbi-center"></div>
 
-                  <div class="fbi-center"></div>
-
-                  <div class="fbi-right">
+                  <div className="fbi-right">
                     &#x99; &amp; &#169; 2016 Wizards of the Coast
                   </div>
                 </div>

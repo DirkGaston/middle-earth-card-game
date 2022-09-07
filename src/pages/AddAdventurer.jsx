@@ -48,7 +48,7 @@ const AddAdventurer = ({ addPlayer }) => {
         <div className="formInput">
           <label htmlFor="name">Mail</label>
           <input
-            type="text"
+            type="email"
             id="mail"
             value={playerMail}
             placeholder="We will need your email address"
