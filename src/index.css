@@ -1,0 +1,543 @@
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background: url(./assets/img/84316.jpg) center center fixed;
+  background-size: cover;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End of reset */
+body* > {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MiddleEarth";
+  src: local("MiddleEarth"),
+    url("./assets/fonts/Middleearth-ao6m.ttf") format("truetype");
+}
+
+.sideNav {
+  height: 75%;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.navLink {
+  font-family: "MiddleEarth";
+  font-size: 20px;
+  font-weight: 700;
+  color: #bca432;
+  background: url(./assets/img/windywoods.gif) center center;
+  border-radius: 25px;
+  padding-block: 5px;
+  padding-inline: 10px;
+  border: 2px solid #bca432;
+}
+
+.sideNav img {
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 150px;
+}
+
+.soundControlBtn {
+  background: url(./assets/img/windywoods.gif) center center;
+  height: 30px;
+  width: 100px;
+  border-radius: 25px;
+  border: 1px solid #bca432;
+}
+
+.playIcon {
+  width: 25px;
+  color: #bca432;
+}
+
+.stopIcon {
+  width: 25px;
+  color: red;
+}
+
+.App {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.flamingCircleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: 150px; */
+  margin-bottom: 25px;
+  margin-left: 85px;
+  width: 90%;
+  animation: fadeIn 7s;
+}
+
+.flamingCircle {
+  width: 50%;
+  height: 800px;
+  filter: url(#wavy) blur(1px);
+}
+
+.flamingCircle:before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  border: 20px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #0f0, inset 0 0 50px #0f0;
+  -webkit-box-reflect: below 10px
+    linear-gradient(transparent, transparent, #0002);
+  animation: animate 5s linear infinite;
+}
+
+.flamingCircle:after {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  border: 20px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff, inset 0 0 20px #fff;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 50px #0f0, inset 0 0 50px #0f0;
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    box-shadow: 0 0 60px #0f0, inset 0 0 60px #0f0;
+  }
+  40% {
+    box-shadow: 0 0 40px #0f0, inset 0 0 40px #0f0;
+  }
+  60% {
+    box-shadow: 0 0 80px #0f0, inset 0 0 80px #0f0;
+  }
+  80% {
+    box-shadow: 0 0 100px #0f0, inset 0 0 80px #0f0;
+  }
+  100% {
+    box-shadow: 0 0 50px #0f0, inset 0 0 50px #0f0;
+    filter: hue-rotate(360deg);
+  }
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+
+.sauronLoop {
+  width: 575px;
+  height: 500px;
+  position: relative;
+  top: 150px;
+  left: 140px;
+  border-radius: 60%;
+  cursor: pointer;
+}
+
+.leaderboardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 250px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  animation: fadeIn 7s;
+}
+
+.cardContainer {
+  border: 1px solid black;
+  width: 500px;
+  height: 700px;
+  margin: 25px;
+  margin-top: 56px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  box-shadow: -8px 9px 16px -3px gray;
+  background: #171314;
+}
+.cardBackground {
+  height: 600px;
+  margin: 20px 20px 0 20px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 8%;
+  border-bottom-right-radius: 8%;
+  background-image: url(https://image.ibb.co/e1XKAS/green_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  background-color: #bbb;
+  z-index: 0;
+}
+
+.frameHeader,
+.frameTypeLine {
+  border-bottom: 4px solid #a9a9a9;
+  border-left: 2px solid #a9a9a9;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.frameHeader,
+.frameArt,
+.frameTypeLine {
+  box-shadow: 0 0 0 2px #171314, 0 0 0 5px #26714a, -3px 3px 2px 5px #171314;
+
+  margin-bottom: 7px;
+}
+
+.frameTextBox {
+  box-shadow: 0 0 0 5px #26714a, -3px 3px 2px 5px #171314;
+}
+
+.frameHeader,
+.frameTypeLine,
+.frameTextBox {
+  overflow: hidden;
+}
+
+.cardFrame {
+  z-index: 1;
+  position: relative;
+  height: 108%;
+  max-width: 97%;
+  left: 1%;
+  top: 0.5%;
+  left: 1.2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.frameHeader,
+.frameTypeLine {
+  background: linear-gradient(
+      0deg,
+      rgba(201, 216, 201, 0.3),
+      rgba(201, 216, 209, 0.3)
+    ),
+    url(https://image.ibb.co/jKByZn/tile_bg_1.jpg);
+  display: flex;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 18px/40px;
+}
+
+.name,
+.race {
+  font-size: 1.3em;
+  font-family: "MiddleEarth";
+  margin-left: 10px;
+  align-self: baseline;
+  font-weight: 600;
+}
+
+.email {
+  margin-right: 10px;
+}
+
+.frameArt {
+  height: 50%;
+  margin: 0 10px;
+}
+
+.frameTypeLine {
+  margin-top: 0;
+}
+
+.frameTextBox {
+  margin: 0 10px;
+  background: #d3ded6;
+  background-image: url(https://image.ibb.co/dFcNx7/tile_bg_2.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 50px 6px;
+  font-size: 1.2em;
+}
+
+.flavourText {
+  font-style: italic;
+  padding: 10px 0;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+.ftb-inner-margin {
+  margin: 5px 1px;
+}
+
+.frame-bottom-info {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 15px 0 15px;
+}
+
+fbi-left {
+  flex: 1;
+}
+.fbi-left p:first-of-type {
+  margin-bottom: 1px;
+}
+.fbi-left,
+.fbi-right {
+  font-size: 10px;
+  position: relative;
+  top: 6px;
+}
+
+.fbi-center {
+  border-radius: 60%;
+  flex-basis: 41px;
+  height: 21px;
+  position: relative;
+  bottom: 11px;
+  z-index: 2;
+  background: lightgray;
+  background-image: url(https://image.ibb.co/jyq34n/holofoil_texture_2.jpg);
+  box-shadow: 0 0 0 4px #171314;
+}
+.inner-margins {
+  margin: 0 10px;
+}
+*/ .fbi-right {
+  flex: 1;
+  text-align: right;
+}
+.frameBottomInfo img {
+  overflow: hidden;
+  max-width: 10px;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 50px;
+  margin-left: 250px;
+  align-items: center;
+}
+
+.searchBarContainer {
+  background: url(https://64.media.tumblr.com/tumblr_lxmrh0DlxB1qm3i8ko1_500.gifv);
+  width: 750px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBarContainer label {
+  font-family: "MiddleEarth";
+  color: #bca432;
+  margin-right: 50px;
+}
+
+.searchTitle {
+  font-family: "MiddleEarth";
+  font-size: 35px;
+  color: white;
+  margin-top: 25px;
+}
+
+.searchBar {
+  width: 350px;
+  height: 25px;
+}
+
+.formContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.formInput label {
+  font-family: "MiddleEarth";
+  margin-bottom: 10px;
+  color: #bca432;
+}
+
+.textArea {
+  width: 250px;
+  height: 100px;
+}
+
+.leaderboardTitle {
+  font-family: "MiddleEarth";
+  font-size: 50px;
+  margin-top: 50px;
+  color: white;
+}
